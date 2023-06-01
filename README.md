@@ -85,8 +85,10 @@
 5. New enemies
 
 ## Assets:
-
 ****[Treasure Hunters](https://pixelfrog-assets.itch.io/treasure-hunters)****
+
+## Reference:
+[GitHub - clear-code-projects/2D-Mario-style-platformer](https://github.com/clear-code-projects/2D-Mario-style-platformer)
 
 ## New Levels:
 ****![level4](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level4.png)****
