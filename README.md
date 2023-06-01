@@ -84,6 +84,12 @@
 
 ****[Treasure Hunters](https://pixelfrog-assets.itch.io/treasure-hunters)****
 
+## New Levels:
+****[level4](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level4.png)****
+****[level5](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level5.png)****
+****[level6](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level6.png)****
+
+
 ## 期末發表
 
 - **專案主題：** 平台式冒險遊戲 - **"瑪利歐海賊團"**
