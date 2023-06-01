@@ -80,10 +80,6 @@
 4. Apply transitions instructions(level pass effect, game over effect, menu)
 5. New enemies
 
-## Project files:
-
-[GitHub - RoyLee1224/mario-platformer](https://github.com/RoyLee1224/mario-platformer)
-
 ## Assets:
 
 ****[Treasure Hunters](https://pixelfrog-assets.itch.io/treasure-hunters)****
