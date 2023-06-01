@@ -82,6 +82,9 @@ class Game:
 
 # Pygame setup
 pygame.init()
+pygame.display.set_caption("Mario Platformer")
+icon = pygame.image.load('../graphics/character/idle/1.png')
+pygame.display.set_icon(icon)
 screen = pygame.display.set_mode((screen_width, screen_height))
 clock = pygame.time.Clock()
 
