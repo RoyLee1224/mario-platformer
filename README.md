@@ -16,6 +16,7 @@
 12. `settings.py`：包含遊戲的基本設置，例如螢幕尺寸、顏色、圖像路徑等。
 13. `transition.py` ：創建遊戲場景之間轉場效果。
 14. `menu.py` ：遊戲的主選單介面
+15. `victory.py` ：呈現遊戲的勝利畫面，結算金幣總數。
 
 > 將遊戲代碼模組化，便於開發和維護。
 > 
@@ -85,9 +86,9 @@
 ****[Treasure Hunters](https://pixelfrog-assets.itch.io/treasure-hunters)****
 
 ## New Levels:
-****[level4](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level4.png)****
-****[level5](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level5.png)****
-****[level6](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level6.png)****
+****![level4](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level4.png)****
+****![level5](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level5.png)****
+****![level6](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/level/level6.png)****
 
 
 ## 期末發表
