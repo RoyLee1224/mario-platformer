@@ -69,15 +69,16 @@ class Game:
     def run(self):
         if self.status == 'overworld':
             self.overworld.run()
+        elif self.level.check_victory():
+            victory_screen = VictoryScreen(screen,self.coins)
+            victory_screen.run()
         else:
             self.level.run()
             self.ui.show_health(self.cur_health, self.max_health)
             self.ui.show_coins(self.coins)
             self.check_game_over()
 
-            if self.level.current_level == 5 and self.level.check_victory():
-                victory_screen = VictoryScreen(screen,self.coins)
-                victory_screen.run()
+
 
 # Pygame setup
 pygame.init()

@@ -74,7 +74,7 @@ class Overworld:
 
 		# add an opacity attribute for the breath effect
 		self.opacity = 0
-		self.opacity_change = 1
+		self.opacity_change = 3
 
 
 	def setup_nodes(self):
@@ -139,17 +139,23 @@ class Overworld:
 	import math
 
 	def draw_text(self):
-		self.opacity += 5 * self.opacity_change
-		if self.opacity > 255 or self.opacity < 0:
-			self.opacity_change *= -1
+		self.opacity += self.opacity_change
+		if self.opacity > 255:
+			self.opacity = 255
+			self.opacity_change = -3
+		elif self.opacity < 0:
+			self.opacity = 0
+			self.opacity_change = 3
 
-		text_color = (int(self.opacity), int(self.opacity), int(self.opacity), 255)
+		text_color = (255, 255, 255)  # keep the color always white
 
 		text1_surface = self.font.render(self.text1, True, text_color)
+		text1_surface.set_alpha(self.opacity)  # change the alpha of the surface
 		text1_rect = text1_surface.get_rect(bottomright=self.text1_pos)
 		self.display_surface.blit(text1_surface, text1_rect)
 
 		text2_surface = self.font.render(self.text2, True, text_color)
+		text2_surface.set_alpha(self.opacity)  # change the alpha of the surface
 		text2_rect = text2_surface.get_rect(bottomright=self.text2_pos)
 		self.display_surface.blit(text2_surface, text2_rect)
 

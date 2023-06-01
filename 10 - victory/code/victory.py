@@ -60,7 +60,12 @@ class VictoryScreen:
         cursor = pygame.cursors.Cursor((0, 0), surf)
         pygame.mouse.set_cursor(cursor)
 
+        # add an opacity attribute for the breath effect
         self.font = pygame.font.Font('../graphics/ui/ARCADEPI.ttf', 30)
+        self.text_color = (255, 255, 255)
+        self.text_surface = pygame.Surface((500, 50), pygame.SRCALPHA)  # Adjust size as needed
+        self.alpha = 128
+        self.alpha_var = 3
 
     def load_gif_frames(self):
         frames = []
@@ -89,10 +94,33 @@ class VictoryScreen:
         return frames
 
     def show_coins(self):
-        font = pygame.font.Font(None, 36)
-        text = font.render(f"Coins: {self.coins}", True, '#33323d')
+        font = pygame.font.Font('../graphics/ui/ARCADEPI.ttf', 50)
+
+        # render outline
+        outline = font.render(f"Coins: {self.coins}", True, '#000000')
+        outline_rect = outline.get_rect(center=(self.screen.get_width() // 2 + 4, self.screen.get_height() // 2 + 104))
+        self.screen.blit(outline, outline_rect)
+
+        # render text
+        text = font.render(f"Coins: {self.coins}", True, '#ffffff')
         text_rect = text.get_rect(center=(self.screen.get_width() // 2, self.screen.get_height() // 2 + 100))
         self.screen.blit(text, text_rect)
+
+    def draw_text(self):
+        # 操作說明呼吸效果
+        self.alpha += self.alpha_var
+        if self.alpha >= 255 or self.alpha <= 0:
+            self.alpha_var *= -1
+
+        # Clear the text surface
+        self.text_surface.fill((0, 0, 0, 0))  # Fill with fully transparent color
+        # Render the text
+        text = self.font.render('Press esc to leave', True, self.text_color)
+        # Blit the text onto the text surface
+        self.text_surface.blit(text, (0, 0))  # Adjust position as needed
+        # Set the alpha of the text surface and blit it onto the screen
+        self.text_surface.set_alpha(self.alpha)
+        self.screen.blit(self.text_surface, (400, 600))
 
     def run(self):
         while self.running:
@@ -122,8 +150,7 @@ class VictoryScreen:
             self.screen.blit(self.y_img, (x, self.start_y))
 
             self.show_coins()
-            coin_amount_surf = self.font.render(str(self.coins), False, (255, 255, 255))
-            self.screen.blit(coin_amount_surf, (100, 100))
+            self.draw_text()
 
             for event in pygame.event.get():
                 if event.type == QUIT or (event.type == KEYDOWN and event.key == K_ESCAPE):
