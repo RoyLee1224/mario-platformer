@@ -1,4 +1,7 @@
-## mario-platformer程式架構
+## mario platformer Demo
+****![demo video](https://github.com/RoyLee1224/mario-platformer/blob/main/10%20-%20victory/graphics/demo/demo.gif)****
+
+## 程式架構
 
 **這些檔案分別代表遊戲中的不同部分和功能：**
 
